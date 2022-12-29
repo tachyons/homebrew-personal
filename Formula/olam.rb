@@ -9,12 +9,10 @@ class Olam < Formula
   depends_on 'qt@5'
 
   def install
-    mkdir 'build' do
-      system 'qmake'
-      system 'make'
-      prefix.install 'build/release/olam.app'
-      (bin / 'olam').write("#! /bin/sh\n#{prefix}/olam.app/Contents/MacOS/olam \"$@\"\n")
-    end
+    system 'qmake'
+    system 'make'
+    prefix.install 'build/release/olam.app'
+    (bin / 'olam').write("#! /bin/sh\n#{prefix}/olam.app/Contents/MacOS/olam \"$@\"\n")
   end
 
   test do
