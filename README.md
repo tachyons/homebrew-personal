@@ -1,6 +1,6 @@
 # homebrew-personal
 
 ```bash
-brew tap markwu/personal
+brew tap tachyons/personal
 brew install zeal
 ```
