@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
-      - name: Install awscli and awsebcli
+      - name: Install zeal
         run: |
          brew tap tachyons/personal
          brew install --HEAD zeal
