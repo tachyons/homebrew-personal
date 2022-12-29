@@ -1,0 +1,14 @@
+name: 'Install packages'
+on:
+  [push, pull_request, workflow_dispatch]
+jobs:
+  build:
+    name: Install commands
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Install awscli and awsebcli
+        run: |
+         brew tap tachyons/personal
+         brew install --HEAD zeal
